@@ -2,21 +2,34 @@
   "name": "server-side-react",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "dependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/register": "^7.25.9",
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "concurrently": "^9.1.2",
+    "express": "^4.21.2",
+    "ignore-styles": "^5.0.1",
+    "nodemon": "^3.1.10",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react-dom": "^19.1.1",
+    "react-router": "^7.2.0",
+    "react-router-dom": "^7.7.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "frontend": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "eject": "react-scripts eject",
+    "backend": "NODE_ENV=production node index.cjs",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "ssr": "npm run build && node index.cjs",
+    "format": "prettier . --write",
+    "config": "node --env-file=.env --experimental-config-file=app.config.json index.js"
   },
   "eslintConfig": {
     "extends": [
@@ -35,5 +48,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^30.0.4",
+    "jest": "^27.5.1",
+    "prettier": "^3.6.2"
   }
 }

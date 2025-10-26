@@ -1,0 +1,12 @@
+{
+  "nodeOptions": {
+    "import": "module"
+  },
+  "envFile": ".env",
+  "watch": true,
+  "watch-path": "./",
+  "watch-preserve-output": true,
+  "testRunner": {
+    "test-isolation": "process"
+  }
+}
