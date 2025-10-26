@@ -30,7 +30,7 @@
     "vercel:start": "NODE_ENV=production node index.cjs",
     "vercel:build": "npm install && npm run build",
     "format": "prettier . --write",
-    "config": "node --env-file=.env --experimental-config-file=app.config.json index.js"
+    "config": "node --env-file=.env --experimental-config-file=app.config.json index.cjs"
   },
   "eslintConfig": {
     "extends": [
