@@ -27,7 +27,8 @@
     "eject": "react-scripts eject",
     "backend": "NODE_ENV=production node index.cjs",
     "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "ssr": "npm run build && node index.cjs",
+    "vercel:start": "NODE_ENV=production node index.cjs",
+    "vercel:build": "npm install && npm run build",
     "format": "prettier . --write",
     "config": "node --env-file=.env --experimental-config-file=app.config.json index.js"
   },
