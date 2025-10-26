@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import RefComponent from './components/RefComponent.jsx';
+import RefComponent from './components/RefComponent';
 import { useRef } from 'react';
 import Tooltip from './components/Tooltip.jsx';
 
