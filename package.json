@@ -22,13 +22,13 @@
   },
   "scripts": {
     "frontend": "react-scripts start",
-    "build": "react-scripts build",
+    "frontend:build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
     "backend": "NODE_ENV=production node index.cjs",
-    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "vercel:start": "NODE_ENV=production node index.cjs",
-    "vercel:build": "npm install && npm run build",
+    "app:start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "start": "NODE_ENV=production node index.cjs",
+    "build": "npm install && npm run frontend:build",
     "format": "prettier . --write",
     "config": "node --env-file=.env --experimental-config-file=app.config.json index.cjs"
   },
