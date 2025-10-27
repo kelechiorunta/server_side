@@ -1,11 +1,10 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { createRoot } from 'react-dom/client';
+
 import App from './App';
 
 // ✅ Import the function normally if you're not mocking it in this test
 import * as utils from './utils';
-import { addThreeToApp } from './App';
 
 jest.mock('./utils', () => ({
   addTwoToAge: jest.fn(() => 4) // ✅ Mocked return value
