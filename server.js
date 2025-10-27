@@ -5,12 +5,15 @@ import express from 'express';
 // const React = require('react');
 import { readFile } from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
 // const { sendFile, readFile } = require('fs');
 // const path = require('path');
 // const App = require('./src/App').default;
 // const Loader = require('./src/loader/Loader').default;
 const app = express();
 // app.use(express.static('public'));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 app.use(express.static(path.join(__dirname, 'build')));
 
 // console.log(process.env.NAME);
