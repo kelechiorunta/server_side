@@ -5,4 +5,4 @@ require('@babel/register')({
   presets: ['@babel/preset-env', '@babel/preset-react'] // Transpile JSX + modern JS
 });
 
-require('./server.js'); // Now run the actual server file
+require('./server.cjs'); // Now run the actual server file
