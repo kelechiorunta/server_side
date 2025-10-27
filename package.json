@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "backend": "NODE_ENV=production node index.cjs",
     "app:start": "concurrently \"npm run frontend\" \"npm run backend\"",
-    "start": "NODE_ENV=production node server.cjs",
+    "start": "NODE_ENV=production node server.js",
     "build": "npm install && npm run frontend:build",
     "format": "prettier . --write",
     "config": "node --env-file=.env --experimental-config-file=app.config.json index.cjs"
