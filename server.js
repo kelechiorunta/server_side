@@ -1,16 +1,19 @@
-const express = require('express');
+// const express = require('express');
+import express from 'express';
 // const { renderToString } = require('react-dom/server');
 // const { StaticRouter } = require('react-router');
 // const React = require('react');
-const { sendFile, readFile } = require('fs');
-const path = require('path');
+import { readFile } from 'fs';
+import path from 'path';
+// const { sendFile, readFile } = require('fs');
+// const path = require('path');
 // const App = require('./src/App').default;
 // const Loader = require('./src/loader/Loader').default;
 const app = express();
 // app.use(express.static('public'));
 app.use(express.static(path.join(__dirname, 'build')));
 
-console.log(process.env.NAME);
+// console.log(process.env.NAME);
 // app.get("*", (req, res) => {
 //   const appHtml = renderToString(
 //     <StaticRouter location={req.url}>
